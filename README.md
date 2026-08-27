@@ -5,4 +5,3 @@ Aplicativo de lista de compras com quantidade e checkbox de "comprado".
 ⭐ Estrela - Criação
 🦋 Borboleta - Edição e atualização
 ☠️ Caveira - Exclusão
-
