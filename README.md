@@ -1,7 +1,8 @@
 # Luma
-Aplicativo de lista de compras
+Aplicativo de lista de compras com quantidade e checkbox de "comprado".
 
-## Padrão de emojis
-Estrela - Criação
-Borboleta - Edição e atualização
-Caveira - Exclusão
+## Padrão de Commits
+⭐ Estrela - Criação
+🦋 Borboleta - Edição e atualização
+☠️ Caveira - Exclusão
+
