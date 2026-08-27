@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import ListaComprasScreen from 'src/screens/ListaComprasScreen'
+import ListaComprasScreen from './src/screens/ListaComprasScreen'
 
 export default function App() {
   return (
