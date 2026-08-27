@@ -1,2 +1,7 @@
-# Luma-projeto
-Repositório para o projeto mobile em dupla
+# Luma
+Aplicativo de lista de compras
+
+## Padrão de emojis
+Estrela - Criação
+Borboleta - Edição e atualização
+Caveira - Exclusão
