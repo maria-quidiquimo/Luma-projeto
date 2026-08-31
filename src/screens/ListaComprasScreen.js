@@ -105,7 +105,7 @@ return (
             />
             <TextInput
                 style={[styles.input, styles.inputQtd]}
-                placeholder="Quantidade ex: 2"
+                placeholder="Quantidade"
                 value={quantidade}
                 onChangeText={setQuantidade}
             />
@@ -139,13 +139,15 @@ const styles = StyleSheet.create({
   screenContainer: {
     flex: 1,
     paddingTop: 20,
+    backgroundColor: '#fffafc', // fundo clarinho
   },
   titulo: {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#1A1A1A',
+    color: '#ba68c8', // lilás suave
     marginBottom: 20,
+    fontFamily: 'Poppins-Bold',
   },
   formulario: {
     flexDirection: 'row',
@@ -154,28 +156,35 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 2,
-    backgroundColor: '#fff',
+    backgroundColor: '#ffe4ec', // rosa pastel
     padding: 12,
-    borderRadius: 8,
+    borderRadius: 20, // mais arredondado
     borderWidth: 1,
-    borderColor: '#DDD',
+    borderColor: '#f8bbd0', // rosa clarinho
     marginRight: 10,
     fontSize: 16,
+    fontFamily: 'Quicksand-Regular',
+    color: '#6a1b9a',
   },
   inputQtd: {
     flex: 1,
   },
   btnAdicionar: {
-    backgroundColor: '#7F5DF0',
+    backgroundColor: '#f48fb1', // rosa mais forte
     paddingHorizontal: 18,
-    borderRadius: 8,
+    borderRadius: 25, // borda bem arredondada
     justifyContent: 'center',
     alignItems: 'center',
+    shadowColor: '#f8bbd0',
+    shadowOpacity: 0.3,
+    shadowRadius: 6,
+    elevation: 4,
   },
   btnAdicionarTexto: {
     color: '#fff',
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
+    fontFamily: 'Poppins-Bold',
   },
   listaContainer: {
     paddingHorizontal: 20,
@@ -183,9 +192,10 @@ const styles = StyleSheet.create({
   },
   listaVazia: {
     textAlign: 'center',
-    color: '#888',
+    color: '#ba68c8',
     marginTop: 40,
     fontSize: 16,
     paddingHorizontal: 20,
+    fontFamily: 'Quicksand-Regular',
   },
 });

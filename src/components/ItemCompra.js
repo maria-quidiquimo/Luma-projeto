@@ -29,63 +29,70 @@ export default function CompraItem({  item, onToggle, onDelete  }){
 }
 
 const styles = StyleSheet.create({
-    card: {
-        backgroundColor: '#fff',
-        padding: 15,
-        borderRadius: 8, 
-        flexDirection: 'row',
-        alignItems: 'center',
-        marginBottom: 10,
-        elevation: 2,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 1 },
-        shadowOpacity: 0.2,
-        shadowRadius: 1.41
-    },
-    checkbox: {
-        width: 24,
-        height: 24,
-        borderRadius: 12,
-        borderWidth: 2,
-        borderColor: '#7F5DF0',
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginRight: 15,
-    },
-    checkboxChecked: {
-        backgroundColor: '#7F5DF0',
-    },
-    checkmark: {
-        color: '#fff',
-        fontWeight: 'bold',
-        fontSize: 14,
-    },
-    infoContainer: {
-        flex: 1,
-    },
-    nome: {
-        fontSize: 16,
-        fontWeight: 'bold',
-        color: '#333',
-    },
-    nomeComprado: {
-        textDecorationLine: 'line-through',
-        color: '#888',
-    },
-    quantidade: {
-        fontSize: 14,
-        color: '#666',
-        marginTop: 2,
-    },
-    btnExcluir: {
-        backgroundColor: '#FF3B30',
-        paddingVertical: 6,
-        paddingHorizontal: 12,
-        borderRadius: 6,
-    },
-    btnExcluirTexto: {
-        color: '#fff',
-        fontWeight: 'bold',
-        fontSize: 12,
-    },
-})
+  card: {
+    backgroundColor: '#ffe4ec', // rosa pastel
+    padding: 15,
+    borderRadius: 16, // mais arredondado
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+    elevation: 3,
+    shadowColor: '#f8bbd0',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.5,
+  },
+  checkbox: {
+    width: 24,
+    height: 24,
+    borderRadius: 12,
+    borderWidth: 2,
+    borderColor: '#ba68c8', // lilás suave
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 15,
+  },
+  checkboxChecked: {
+    backgroundColor: '#ba68c8', // lilás preenchido
+  },
+  checkmark: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 14,
+  },
+  infoContainer: {
+    flex: 1,
+  },
+  nome: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    color: '#6a1b9a', // lilás mais escuro
+    fontFamily: 'Poppins-Bold',
+  },
+  nomeComprado: {
+    textDecorationLine: 'line-through',
+    color: '#888',
+  },
+  quantidade: {
+    fontSize: 14,
+    color: '#666',
+    marginTop: 2,
+    fontFamily: 'Quicksand-Regular',
+  },
+  btnExcluir: {
+    backgroundColor: '#f48fb1', // rosa forte
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 20, // mais arredondado
+    shadowColor: '#f8bbd0',
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  btnExcluirTexto: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 12,
+    fontFamily: 'Poppins-Bold',
+  },
+});
