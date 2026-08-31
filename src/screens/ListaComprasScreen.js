@@ -16,6 +16,7 @@ export default function ListaComprasScreens(){
     const [nome, setNome] = useState('');
     const [quantidade, setQuantidade] = useState('');
 
+
     useEffect(() => {
     carregarItens();
 }, []);
@@ -132,6 +133,7 @@ return (
     </View>
 )
 }
+
 
 const styles = StyleSheet.create({
   screenContainer: {
