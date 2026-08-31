@@ -17,7 +17,7 @@ export default function App() {
       {/* Menu do Rodapé */}
       <View style={styles.menuBar}>
         <TouchableOpacity 
-          style={styles.menuItem} 
+          style={styles.menuItem} aq
           onPress={() => setTelaAtual('lista')}
         >
           <Text style={[styles.menuTexto, telaAtual === 'lista' && styles.menuAtivo]}>
