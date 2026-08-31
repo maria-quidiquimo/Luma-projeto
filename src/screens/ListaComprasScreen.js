@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
     StyleSheet, 
     Text, 
@@ -9,7 +9,7 @@ import {
     Alert
 } from 'react-native';
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import CompraItem from "../components/itemCompra";
+import CompraItem from "../components/ItemCompra";
 
 export default function ListaComprasScreens(){
     const [itens, setItens] = useState([]);
@@ -114,7 +114,7 @@ return (
         </View>
 
         <FlatList
-            data={setItens}
+            data={itens}
             keyExtractor={item => item.id}
             renderItem={({item}) => (
                 <CompraItem
