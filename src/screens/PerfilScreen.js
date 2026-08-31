@@ -147,113 +147,155 @@ export default function PerfilScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F6FA',
+    backgroundColor: '#fffafc', // fundo clarinho
+    paddingHorizontal: 20,
   },
-  content: {
-    padding: 20,
-    paddingTop: 30,
-  },
-  titulo: {
-    fontSize: 22,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    color: '#1A1A1A',
-    marginBottom: 20,
-  },
-  avatarContainer: {
+  header: {
     alignItems: 'center',
+    marginTop: 20,
     marginBottom: 20,
+  },
+  avatarWrapper: {
+    position: 'relative',
+    marginBottom: 12,
   },
   avatar: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    backgroundColor: '#7F5DF0',
+    width: 96,
+    height: 96,
+    borderRadius: 48,
+    borderWidth: 3,
+    borderColor: '#f48fb1', // rosa forte
+  },
+  editBadge: {
+    position: 'absolute',
+    bottom: 0,
+    right: 0,
+    backgroundColor: '#ba68c8', // lilás
+    width: 30,
+    height: 30,
+    borderRadius: 15,
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: 8,
+    borderWidth: 2,
+    borderColor: '#FFF',
+    shadowColor: '#f8bbd0',
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 3,
   },
-  avatarTexto: {
-    color: '#FFF',
-    fontSize: 32,
+  editBadgeText: {
+    fontSize: 12,
+    color: '#fff',
     fontWeight: 'bold',
   },
-  userTag: {
-    fontSize: 16,
-    color: '#666',
-    fontWeight: '500',
+  nome: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#6a1b9a', // lilás escuro
+    fontFamily: 'Poppins-Bold',
   },
-  card: {
-    backgroundColor: '#FFF',
-    borderRadius: 12,
-    padding: 16,
+  email: {
+    fontSize: 14,
+    color: '#888',
+    marginTop: 2,
+    fontFamily: 'Quicksand-Regular',
+  },
+  statsCard: {
+    flexDirection: 'row',
+    backgroundColor: '#ffe4ec', // rosa pastel
+    borderRadius: 20,
+    paddingVertical: 18,
+    marginBottom: 25,
+    elevation: 3,
+    shadowColor: '#f8bbd0',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.2,
+    shadowRadius: 6,
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+  statItem: {
+    alignItems: 'center',
+    flex: 1,
+  },
+  statNumero: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#ba68c8',
+    fontFamily: 'Poppins-Bold',
+  },
+  statLabel: {
+    fontSize: 12,
+    color: '#999',
+    marginTop: 2,
+    fontFamily: 'Quicksand-Regular',
+  },
+  divider: {
+    width: 1,
+    height: 30,
+    backgroundColor: '#f8bbd0',
+  },
+  section: {
     marginBottom: 20,
+  },
+  sectionTitle: {
+    fontSize: 13,
+    fontWeight: '700',
+    color: '#ba68c8',
+    textTransform: 'uppercase',
+    letterSpacing: 0.8,
+    marginBottom: 10,
+    marginLeft: 4,
+  },
+  menuItem: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    paddingVertical: 14,
+    paddingHorizontal: 16,
+    borderRadius: 16,
+    marginBottom: 8,
     elevation: 2,
-    shadowColor: '#000',
+    shadowColor: '#f8bbd0',
     shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.08,
+    shadowOpacity: 0.1,
     shadowRadius: 4,
   },
-  campoContainer: {
-    marginVertical: 4,
+  menuIcon: {
+    fontSize: 18,
+    marginRight: 14,
+    color: '#f48fb1',
   },
-  label: {
-    fontSize: 12,
-    fontWeight: 'bold',
-    color: '#888',
-    textTransform: 'uppercase',
-    marginBottom: 4,
-  },
-  valor: {
-    fontSize: 16,
-    color: '#222',
+  menuText: {
+    flex: 1,
+    fontSize: 15,
     fontWeight: '500',
+    color: '#6a1b9a',
+    fontFamily: 'Quicksand-Regular',
   },
-  input: {
-    backgroundColor: '#F8F9FA',
+  menuSeta: {
+    fontSize: 20,
+    color: '#ba68c8',
+    fontWeight: 'bold',
+  },
+  btnSair: {
+    backgroundColor: '#fff0f6',
     borderWidth: 1,
-    borderColor: '#7F5DF0',
-    borderRadius: 8,
-    padding: 10,
-    fontSize: 15,
-    color: '#222',
-  },
-  divisor: {
-    height: 1,
-    backgroundColor: '#EAEAEA',
-    marginVertical: 10,
-  },
-  btn: {
-    padding: 14,
-    borderRadius: 10,
+    borderColor: '#f8bbd0',
+    paddingVertical: 14,
+    borderRadius: 20,
     alignItems: 'center',
-    justifyContent: 'center',
+    marginTop: 10,
+    marginBottom: 40,
+    shadowColor: '#f8bbd0',
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 2,
   },
-  btnEditar: {
-    backgroundColor: '#7F5DF0',
-  },
-  btnEditarTexto: {
-    color: '#FFF',
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  botoesEdicao: {
-    gap: 10,
-  },
-  btnSalvar: {
-    backgroundColor: '#7F5DF0',
-  },
-  btnSalvarTexto: {
-    color: '#FFF',
-    fontWeight: 'bold',
-    fontSize: 16,
-  },
-  btnCancelar: {
-    backgroundColor: '#EAEAEA',
-  },
-  btnCancelarTexto: {
-    color: '#555',
+  btnSairTexto: {
+    color: '#f06292', // rosa vibrante
     fontWeight: 'bold',
     fontSize: 15,
+    fontFamily: 'Poppins-Bold',
   },
 });
