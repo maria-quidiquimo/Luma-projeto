@@ -12,7 +12,7 @@ export default function CompraItem({  item, onToggle, onDelete  }){
             </TouchableOpacity>
 
             <View style={styles.infoContainer}>
-                <Text style={[styles.nome, item.compado && styles.nomeComprado]}>       {item.nome}
+                <Text style={[styles.nome, item.comprado && styles.nomeComprado]}>       {item.nome}
                 </Text>
                 <Text style={styles.quantidade}>
                     Qtd: {item.quantidade}
