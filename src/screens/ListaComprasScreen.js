@@ -11,6 +11,8 @@ import {
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import CompraItem from "../components/ItemCompra";
 
+const CHAVE_STORAGE = '@rn-storage-lesson:luma';
+
 export default function ListaComprasScreens(){
     const [itens, setItens] = useState([]);
     const [nome, setNome] = useState('');
@@ -23,7 +25,7 @@ export default function ListaComprasScreens(){
 
 const carregarItens = async () => {
     try {
-        const dadosSalvos = await AsyncStorage.getItem('@luma:itens');
+        const dadosSalvos = await AsyncStorage.getItem(CHAVE_STORAGE);
         if(dadosSalvos !== null){
             setItens(JSON.parse(dadosSalvos));
         }
@@ -34,7 +36,7 @@ const carregarItens = async () => {
 
 const salvarItens = async (novaLista) => {
     try {
-        await AsyncStorage.setItem('@luma:itens', JSON.stringify(novaLista));
+        await AsyncStorage.setItem(CHAVE_STORAGE, JSON.stringify(novaLista));
     } catch (erro) {
         Alert.alert('Erro', 'Não foi possível salvar os dados')
     }
@@ -95,7 +97,7 @@ const deletarItem = (id) => {
 async function apagarTudo() {
     try{
         setItens([])
-        await AsyncStorage.removeItem()
+        await AsyncStorage.removeItem(CHAVE_STORAGE)
     }catch(erro){
         console.error("Erro ao limpar o storage", erro)
     }
