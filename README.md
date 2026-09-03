@@ -64,6 +64,11 @@ O **Luma** nasceu para transformar a rotina de compras em um momento charmoso e 
 
 ---
 
+## 📱 Interface 
+![Tela Principal - Lista de Compras](screenshots/tela-principal.png)| ![Tela do Usuário](screenshots/tela-usuario.png)
+
+---
+
 ## 💖 Contribuição
 
 Sugestões e melhorias são super bem-vindas! Sinta-se à vontade para abrir uma *Issue* ou enviar um *Pull Request*.
