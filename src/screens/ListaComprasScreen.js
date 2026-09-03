@@ -92,6 +92,15 @@ const deletarItem = (id) => {
     );
 };
 
+async function apagarTudo() {
+    try{
+        setItens([])
+        await AsyncStorage.removeItem()
+    }catch(erro){
+        console.error("Erro ao limpar o storage", erro)
+    }
+}
+
 return (
     <View style={styles.screenContainer}>
         <Text style={styles.titulo}> 🛒 Luma - Lista de Compras </Text>
@@ -130,6 +139,12 @@ return (
                 <Text style={styles.listaVazia}>Sua lista de compras está vazia</Text>
             }
         />
+
+        <View style={styles.listaContainer}>
+            <TouchableOpacity style={styles.btnApagarTudo} onPress={apagarTudo}>
+            <Text style={styles.btnApagarTudoTexto}>Apagar Lista</Text>
+            </TouchableOpacity>
+        </View>
     </View>
 )
 }
@@ -197,5 +212,21 @@ const styles = StyleSheet.create({
     fontSize: 16,
     paddingHorizontal: 20,
     fontFamily: 'Quicksand-Regular',
+  },
+   btnApagarTudo: {
+    backgroundColor: '#f48fb1', // rosa forte
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 20, // mais arredondado
+    shadowColor: '#f8bbd0',
+    shadowOpacity: 0.3,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  btnApagarTudoTexto: {
+    color: '#fff',
+    fontWeight: 'bold',
+    fontSize: 12,
+    fontFamily: 'Poppins-Bold',
   },
 });
