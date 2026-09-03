@@ -215,18 +215,19 @@ const styles = StyleSheet.create({
   },
    btnApagarTudo: {
     backgroundColor: '#f48fb1', // rosa forte
-    paddingVertical: 6,
-    paddingHorizontal: 12,
-    borderRadius: 20, // mais arredondado
+    paddingVertical: 12,
+    borderRadius: 8, // mais arredondado
     shadowColor: '#f8bbd0',
     shadowOpacity: 0.3,
     shadowRadius: 4,
     elevation: 3,
+    alignItems: "center",
+    justifyContent: "center",
   },
   btnApagarTudoTexto: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 12,
+    fontSize: 16,
     fontFamily: 'Poppins-Bold',
   },
 });
