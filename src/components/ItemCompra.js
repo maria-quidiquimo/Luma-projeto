@@ -1,18 +1,20 @@
 import React from "react";
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default function CompraItem({  item, onToggle, onDelete  }){
+export default function CompraItem({  item, onToggle, onDelete  }){ 
+  // na linha acima são as props: item > verifica se foi comprado, os outros dois aplica o comando
     return (
         <View style={styles.card}>
             <TouchableOpacity
                 style={[styles.checkbox, item.comprado && styles.checkboxChecked]}
                 onPress={() => onToggle(item.id)}
                 >
-                {item.comprado && <Text style={styles.checkmark}>✓</Text>}
+                {item.comprado && <Text style={styles.checkmark}>✓</Text>} {/* marca checkzinho na compra */}
+                
             </TouchableOpacity>
 
             <View style={styles.infoContainer}>
-                <Text style={[styles.nome, item.comprado && styles.nomeComprado]}>       {item.nome}
+                <Text style={[styles.nome, item.comprado && styles.nomeComprado]}>{item.nome} 
                 </Text>
                 <Text style={styles.quantidade}>
                     Qtd: {item.quantidade}
@@ -70,7 +72,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Poppins-Bold',
   },
   nomeComprado: {
-    textDecorationLine: 'line-through',
+    textDecorationLine: 'line-through', // aplica o risquinho no nome do produto
     color: '#888',
   },
   quantidade: {
