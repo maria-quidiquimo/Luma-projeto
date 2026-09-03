@@ -14,20 +14,20 @@ import CompraItem from "../components/ItemCompra";
 const CHAVE_STORAGE = '@rn-storage-lesson:luma';
 
 export default function ListaComprasScreens(){
+    // useState funciona como memória de curto prazo, e toda vez que escrevemos ele redesenhq a tela 
     const [itens, setItens] = useState([]);
     const [nome, setNome] = useState('');
     const [quantidade, setQuantidade] = useState('');
 
-
-    useEffect(() => {
+    useEffect(() => { // faz carregar os itens salvos
     carregarItens();
 }, []);
 
 const carregarItens = async () => {
     try {
-        const dadosSalvos = await AsyncStorage.getItem(CHAVE_STORAGE);
+        const dadosSalvos = await AsyncStorage.getItem(CHAVE_STORAGE); // asyncstorage é uma memoria permanente.
         if(dadosSalvos !== null){
-            setItens(JSON.parse(dadosSalvos));
+            setItens(JSON.parse(dadosSalvos));// parse pega o texto e transforma de volta em lista 
         }
     } catch (erro) {
         Alert.alert('Erro', 'Não foi possível carregar os itens.');
@@ -36,12 +36,13 @@ const carregarItens = async () => {
 
 const salvarItens = async (novaLista) => {
     try {
-        await AsyncStorage.setItem(CHAVE_STORAGE, JSON.stringify(novaLista));
+        await AsyncStorage.setItem(CHAVE_STORAGE, JSON.stringify(novaLista)); // stryngfy transforma em texto para salvar no celular
     } catch (erro) {
         Alert.alert('Erro', 'Não foi possível salvar os dados')
     }
 }
 
+// adicionarItem ve se o usuário preencheu todos os itens para adicionar um item no fim da lista
 const adicionarItem = () =>{
    if(!nome.trim() || !quantidade.trim()) {
         Alert.alert('Aviso', 'Por favor, preencha o nome do produto e a quantidade');
@@ -63,6 +64,7 @@ const adicionarItem = () =>{
     setQuantidade('');
 }
 
+// alternar comprado verifica a lista e se algo for clicado ele inverte a situação
 const alternarComprado = (id) => {
     const novaLista = itens.map(item => {
         if (item.id === id){
@@ -125,6 +127,7 @@ return (
             </TouchableOpacity>
         </View>
 
+        {/* flatlist desenha os itens que estão visiveis na tela economizando memoria sem carregar todos os itens de uma vez */}
         <FlatList
             data={itens}
             keyExtractor={item => item.id}
